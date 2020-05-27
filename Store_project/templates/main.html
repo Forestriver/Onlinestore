@@ -14,3 +14,28 @@
     </div>
 </div>
 {% endblock %}
+
+{% block form %}
+<div class = "container-fluid logintemplate text-left">
+  <div class = "row">
+    <div class = "col-sm"></div>
+    <div class = "col-6-sm">
+      {% if form.errors %}
+      <p>Username and password didn't match. Please try again.</p>
+      {% endif %}
+          <p>Please, use the following form to log-in:</p>
+          <form action="{% url 'products' %}" method="POST">
+            {% csrf_token %}
+            <div class = "form-group">
+              <input type = "text" class = "form-control" placeholder = "User name" id = "name">
+            </div>
+            <div class = "form-group">
+                <input type ="password" class = "form-control" placeholder = "password" id = "password">
+                <input type = "submit" class = "btn btn-secondary" value = "Sign in" id = "submit">
+            </div>
+          </form>
+    </div>
+    <div class = "col-sm"></div>
+  </div>
+</div>
+{% endblock %}

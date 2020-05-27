@@ -20,9 +20,9 @@ def products(request):
     return render(request, 'products.html', context)
 
 
-def contacts(request):
-    context = {"contacts_page": "active"}
-    return render(request, 'contacts.html', context)
+def cart(request):
+    context = {"cart_page": "active"}
+    return render(request, 'cart.html', context)
 
 @login_required
 def login(request):

@@ -32,12 +32,21 @@
                <li class="nav-item" {{technologies_page}}>
                  <a class="nav-link" data-value = "technologies" href="{% url 'products' %}">Products</a>
                </li>
-               <li class="nav-item" {{contacts_page}}>
-                 <a class="nav-link" data-value = "contacts" href="{% url 'contacts' %}">Contacts</a>
+               <li class="nav-item" {{cart_page}}>
+                 <a class="nav-link" data-value = "cart" href="{% url 'cart' %}">Shopping Cart</a>
                </li>
                <li class="nav-item" {{login_page}}>
-                 <a class="nav-link" data-value = "login" href="{% url 'login' %}">Login</a>
+                 <div class="nav-link">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Login
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      {% block form %}
+                      {% endblock %}
+                    </div>
+                 </div>
                </li>
+
              </ul>
            </div>
     </header>

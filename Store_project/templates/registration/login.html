@@ -7,9 +7,9 @@
 <div class = "container-fluid pagetemplate text-center">
   <div class = "row">
     <div class = "col-sm"></div>
-    <div class = "col-sm">
+    <div class = "col-12-sm">
           <p>Please, use the following form to log-in:</p>
-          <form action="{% url 'main' %}" method="POST">
+          <form action="{% url 'products' %}" method="POST">
             {% csrf_token %}
             <div class = "form-group">
               <input type = "text" class = "form-control" placeholder = "User name" id = "name">

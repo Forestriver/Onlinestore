@@ -29,7 +29,7 @@ class Order(models.Model):
     order_date = models.DateTimeField('Date and time of the order')
     notes = models.TextField(blank=True, verbose_name="Additional information")
 
-    def order_planned(self):
+    def order_accepted(self):
         return self.order_date >= timezone.now('Europe/London') - datetime.timedelta(days=1)
 
     def __str__(self):

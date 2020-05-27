@@ -8,14 +8,16 @@ body, html {
 
 .navbar-custom {
     background-color: #11345c;
-    opacity: 0.7;
+    opacity: 0.5;
     font-size: 20px;
     font-family: 'Comfortaa', cursive;
     font-style: normal;
+    border-bottom:1px solid #ffffff;
 }
 
 .navbar-custom .nav-item .nav-link {
-  color: #DC9219;
+  color: #C2AC45;
+  font-family: Arial, fantasy;
 }
 
 .navbar .nav > li > a:hover {
@@ -43,12 +45,12 @@ body, html {
       bottom: 0;
       left: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2)),
-          url;
+          url('../images/florida_bridge.jpg');;
   background-size: cover;
   background-attachment: relative;
   background-repeat: no-repeat;
   background-position: 40% 40%;
-  color: #DC9219;
+  color: #white;
   overflow: hidden;
   -webkit-animation: 2s cubic-bezier(.5, .15, .55, 1) fade;
   animation: 2s cubic-bezier(.5, .15, .55, 1) fade;
@@ -172,6 +174,37 @@ h5, h3 {
 }
 
 .pagetemplate .btn:hover {
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+@media only screen and (max-width: 768px) {
+    .logintemplate {
+        padding: 4em;
+    }
+    .pagetemplate .desc{
+     padding: 1em;
+   }
+}
+
+.logintemplate {
+}
+
+.logintemplate .form-control,
+.logintemplate input {
+    border-radius: 7px;
+    box-shadow: 5px 5px 3px grey;
+    background-color: beige;
+}
+.logintemplate .btn {
+  background-color: #589b37;
+  border: 1px solid #589b37;
+  color: #fff;
+  margin-top: 20px;
+  box-shadow: 5px 5px 3px grey;
+}
+
+.logintemplate .btn:hover {
   background-color: #333;
   border: 1px solid #333;
 }
